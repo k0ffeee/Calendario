@@ -93,7 +93,7 @@ Uma API para controle de rotina do dia a dia
 ```js
 {
   user: 'Fernando.Cesar',
-  email: 'rm95628@fiap.com.br'
+  email: 'rm95628@fiap.com.br',
   senha: '12345abc'
 }
 
@@ -116,7 +116,7 @@ Uma API para controle de rotina do dia a dia
 ```js
 {
   user: 'Fernando.Cesar',
-  email: 'rm95628@fiap.com.br'
+  email: 'rm95628@fiap.com.br',
   senha: '12345abc'
 }
 ```
