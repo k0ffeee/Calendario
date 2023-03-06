@@ -17,14 +17,14 @@ Uma API para controle de rotina do dia a dia
 
 
 ### Cadastrar Evento
-`POST`/api/Evento
+`POST`/api/evento
 
 |Campo|tipo|Obrigatório|descrição
 |------ |------|:-----------: |---------
-|Nome|texto|sim|Nome do evento para poder indentificar
+|Nome|text|sim|Nome do evento para poder indentificar
 |Horário| time | sim | Horário em que vai acontecer o evento
-|Lembrete| texto | não | Mandar uma notificação de quando irá acontecer um determinado evento
-|Conta| texto | sim | Conta em que vai ficar salvo o evento
+|Lembrete| text | não | Mandar uma notificação de quando irá acontecer um determinado evento
+|Conta| text | sim | Conta em que vai ficar salvo o evento
 
 **Exemplo de corpo de requisição**
 ```js
