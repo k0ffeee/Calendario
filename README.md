@@ -50,7 +50,7 @@ Uma API para controle de rotina do dia a dia
 
 
 
-### Detalhar Despesas
+### Detalhar Evento
 `GET`/api/evento/{id}       
 ```js
 {
