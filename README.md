@@ -80,4 +80,57 @@ Uma API para controle de rotina do dia a dia
 
 
 
+### Cadastrar Conta
+`POST`/api/conta
+
+|Campo|tipo|Obrigatório|descrição
+|------ |------|:-----------: |---------
+|Nome de Usuario|text|sim|Nome que identicará o usuário e também poderá ser utilizado para login
+|Email| text | sim | email do usuário para efetuar o login
+|Senha| text | sim | senha do usuário para efetuar o login
+
+**Exemplo de corpo de requisição**
+```js
+{
+  user: 'Fernando.Cesar',
+  email: 'rm95628@fiap.com.br'
+  senha: '12345abc'
+}
+
+```
+
+
+**Exemplo de corpo da respota**
+
+**Cógigos de respota**
+
+|código| descrição
+| - | -
+|202 | conta cadastrada com sucesso
+|401 | os campos enviados sao invalidos
+
+
+
+### Detalhar Conta
+`GET`/api/conta/{id}       
+```js
+{
+  user: 'Fernando.Cesar',
+  email: 'rm95628@fiap.com.br'
+  senha: '12345abc'
+}
+```
+
+**Cógigos de respota**
+
+|código| descrição
+| - | -
+|200 | dados retornados com sucesso
+|402 | não existe conta com o id informado
+
+
+
+
+
+
 
