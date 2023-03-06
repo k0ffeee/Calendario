@@ -2,7 +2,7 @@
 
 Uma API para controle de rotina do dia a dia 
 
-##Endpoints
+### Endpoints
 
 - Eventos 
     - Cadastrar
@@ -20,6 +20,7 @@ Uma API para controle de rotina do dia a dia
 `POST`/api/Evento
 
 |Campo|tipo|Obrigatório|descrição
+|------ |------|:-----------: |---------
 |Nome|texto|sim|Nome do evento para poder indentificar
 |Horário| time | sim | Horário em que vai acontecer o evento
 |Lembrete| texto | não | Mandar uma notificação de quando irá acontecer um determinado evento
