@@ -9,7 +9,7 @@ Uma API para controle de rotina do dia a dia
     - Atualizar
     - Listar todos
     - Mostrar detalhes
-- Contas
+- Usuário
     - Cadastrar
     - Atualizar
     - Listar todos
@@ -24,7 +24,7 @@ Uma API para controle de rotina do dia a dia
 |Nome|text|sim|Nome do evento para poder indentificar
 |Horário| time | sim | Horário em que vai acontecer o evento
 |Lembrete| text | não | Mandar uma notificação de quando irá acontecer um determinado evento
-|Conta| text | sim | Conta em que vai ficar salvo o evento
+|usuário| text | sim | usuário em que vai ficar salvo o evento
 
 **Exemplo de corpo de requisição**
 ```js
@@ -33,7 +33,7 @@ Uma API para controle de rotina do dia a dia
   data: '09-03-2023',
   horario: '15:30',
   lembrete: '5 minutos antes',
-  conta: 'rm95628@fiap.com.br'
+  user: 'rm95628@fiap.com.br'
 }
 
 ```
@@ -80,8 +80,8 @@ Uma API para controle de rotina do dia a dia
 
 
 
-### Cadastrar Conta
-`POST`/api/conta
+### Cadastrar Usuário
+`POST`/api/usuario
 
 |Campo|tipo|Obrigatório|descrição
 |------ |------|:-----------: |---------
@@ -111,8 +111,8 @@ Uma API para controle de rotina do dia a dia
 
 
 
-### Detalhar Conta
-`GET`/api/conta/{id}       
+### Detalhar usuário
+`GET`/api/usuario/{id}       
 ```js
 {
   user: 'Fernando.Cesar',
@@ -126,7 +126,7 @@ Uma API para controle de rotina do dia a dia
 |código| descrição
 | - | -
 |200 | dados retornados com sucesso
-|402 | não existe conta com o id informado
+|402 | não existe usuário com o id informado
 
 
 
