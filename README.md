@@ -38,15 +38,65 @@ Uma API para controle de rotina do dia a dia
 
 ```
 
-
 **Exemplo de corpo da respota**
 
 **Cógigos de respota**
 
 |código| descrição
 | - | -
-|201 | evento cadastrado com sucesso
+|200 | evento cadastrado com sucesso
 |400 | os campos enviados sao invalidos
+
+
+###Atualizar Evento
+`UPDATE`/api/evento/{id}
+
+**Exemplo de corpo de requisição**
+```js
+{
+  nome: 'Médico',
+  data: '13-03-2023',
+  horario: '16:30',
+  lembrete: '1 dia antes',
+  user: 'rm95628@fiap.com.br'
+}
+
+```
+**Cógigos de respota**
+
+|código| descrição
+| - | -
+|201 | dados atualizados com sucesso
+|401 | não existe evento com o id informado
+
+
+
+###Listar todos
+**Exemplo de corpo de requisição**
+```js
+{
+  nome: 'Médico',
+  data: '13-03-2023',
+  horario: '16:30',
+  lembrete: '1 dia antes',
+  user: 'rm95628@fiap.com.br'
+}
+{
+  nome: 'Dentista',
+  data: '19-03-2023',
+  horario: '10:30',
+  lembrete: '1 dia antes',
+  user: 'rm95628@fiap.com.br'
+}
+
+```
+
+**Cógigos de respota**
+
+|código| descrição
+| - | -
+|202 | dados retornados com sucesso
+|402 | não existe evento cadastrado
 
 
 
@@ -69,15 +119,8 @@ Uma API para controle de rotina do dia a dia
 
 |código| descrição
 | - | -
-|200 | dados retornados com sucesso
-|404 | não existe evento com o id informado
-
-
-
-
-
-
-
+|203 | dados retornados com sucesso
+|403 | não existe evento com o id informado
 
 
 ### Cadastrar Usuário
@@ -96,9 +139,7 @@ Uma API para controle de rotina do dia a dia
   email: 'rm95628@fiap.com.br',
   senha: '12345abc'
 }
-
 ```
-
 
 **Exemplo de corpo da respota**
 
@@ -106,8 +147,47 @@ Uma API para controle de rotina do dia a dia
 
 |código| descrição
 | - | -
-|202 | conta cadastrada com sucesso
-|401 | os campos enviados sao invalidos
+|204 | conta cadastrada com sucesso
+|404 | os campos enviados sao invalidos
+
+
+
+###Atualizar Usuario
+`UPDATE`/api/usuario/{id}
+
+**Exemplo de corpo de requisição**
+```js
+{
+  user: 'FernandoCesxr',
+  email: 'rm95628@fiap.com.br',
+  senha: '1234'
+}
+```
+
+###Listar todos
+**Exemplo de corpo de requisição**
+```js
+{
+  user: 'FernandoCesxr',
+  email: 'rm95628@fiap.com.br',
+  senha: '1234'
+}
+{
+  user: 'Joao Pedro',
+  email: 'rm956538@fiap.com.br',
+  senha: '5r0JO9JW8&sV'
+}
+
+```
+
+**Cógigos de respota**
+
+|código| descrição
+| - | -
+|205 | dados retornados com sucesso
+|405 | não existe evento cadastrado
+
+
 
 
 
@@ -125,8 +205,8 @@ Uma API para controle de rotina do dia a dia
 
 |código| descrição
 | - | -
-|200 | dados retornados com sucesso
-|402 | não existe usuário com o id informado
+|206 | dados retornados com sucesso
+|406 | não existe usuário com o id informado
 
 
 
