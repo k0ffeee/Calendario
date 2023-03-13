@@ -48,7 +48,7 @@ Uma API para controle de rotina do dia a dia
 |400 | os campos enviados sao invalidos
 
 
-###Atualizar Evento
+### Atualizar Evento
 `UPDATE`/api/evento/{id}
 
 **Exemplo de corpo de requisição**
@@ -71,7 +71,7 @@ Uma API para controle de rotina do dia a dia
 
 
 
-###Listar todos
+### Listar todos
 **Exemplo de corpo de requisição**
 ```js
 {
@@ -152,7 +152,7 @@ Uma API para controle de rotina do dia a dia
 
 
 
-###Atualizar Usuario
+### Atualizar Usuario
 `UPDATE`/api/usuario/{id}
 
 **Exemplo de corpo de requisição**
@@ -164,7 +164,7 @@ Uma API para controle de rotina do dia a dia
 }
 ```
 
-###Listar todos
+### Listar todos
 **Exemplo de corpo de requisição**
 ```js
 {
