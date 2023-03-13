@@ -9,11 +9,13 @@ Uma API para controle de rotina do dia a dia
     - Atualizar
     - Listar todos
     - Mostrar detalhes
+    - Apagar
 - Usuário
     - Cadastrar
     - Atualizar
     - Listar todos
     - Mostrar detalhes
+    - Apagar
 
 
 ### Cadastrar Evento
@@ -44,9 +46,10 @@ Uma API para controle de rotina do dia a dia
 
 |código| descrição
 | - | -
-|200 | evento cadastrado com sucesso
+|200 | dados cadastrado com sucesso
 |400 | os campos enviados sao invalidos
 
+---------------------------------------------------------------------
 
 ### Atualizar Evento
 `UPDATE`/api/evento/{id}
@@ -67,9 +70,9 @@ Uma API para controle de rotina do dia a dia
 |código| descrição
 | - | -
 |201 | dados atualizados com sucesso
-|401 | não existe evento com o id informado
+|401 | não existe dado com o id informado
 
-
+---------------------------------------------------------------------
 
 ### Listar todos
 **Exemplo de corpo de requisição**
@@ -88,7 +91,6 @@ Uma API para controle de rotina do dia a dia
   lembrete: '1 dia antes',
   user: 'rm95628@fiap.com.br'
 }
-
 ```
 
 **Cógigos de respota**
@@ -98,6 +100,7 @@ Uma API para controle de rotina do dia a dia
 |202 | dados retornados com sucesso
 |402 | não existe evento cadastrado
 
+---------------------------------------------------------------------
 
 
 ### Detalhar Evento
@@ -114,14 +117,27 @@ Uma API para controle de rotina do dia a dia
   }
 }
 ```
-
 **Cógigos de respota**
 
 |código| descrição
 | - | -
-|203 | dados retornados com sucesso
-|403 | não existe evento com o id informado
+|202 | dados retornados com sucesso
+|401 | não existe dado com o id informado
 
+---------------------------------------------------------------------
+
+
+
+### Apagar evento
+`DELETE`/api/evento/{id}
+
+|código| descrição
+| - | -
+|203 | dado apagado com sucesso
+|401 | não existe dado com o id informado
+
+
+---------------------------------------------------------------------
 
 ### Cadastrar Usuário
 `POST`/api/usuario
@@ -147,10 +163,10 @@ Uma API para controle de rotina do dia a dia
 
 |código| descrição
 | - | -
-|204 | conta cadastrada com sucesso
-|404 | os campos enviados sao invalidos
+|203 | conta cadastrada com sucesso
+|400 | os campos enviados sao invalidos
 
-
+---------------------------------------------------------------------
 
 ### Atualizar Usuario
 `UPDATE`/api/usuario/{id}
@@ -163,8 +179,19 @@ Uma API para controle de rotina do dia a dia
   senha: '1234'
 }
 ```
+**Cógigos de respota**
+
+|código| descrição
+| - | -
+|200 | dados atualizados com sucesso
+|401 | não existe dado com o id informado
+
+---------------------------------------------------------------------
+
+
 
 ### Listar todos
+`GET`/api/usuario
 **Exemplo de corpo de requisição**
 ```js
 {
@@ -180,15 +207,16 @@ Uma API para controle de rotina do dia a dia
 
 ```
 
+
 **Cógigos de respota**
 
 |código| descrição
 | - | -
-|205 | dados retornados com sucesso
-|405 | não existe evento cadastrado
+|202 | dados retornados com sucesso
+|403 | não existe usuario cadastrado
 
 
-
+---------------------------------------------------------------------
 
 
 ### Detalhar usuário
@@ -205,10 +233,18 @@ Uma API para controle de rotina do dia a dia
 
 |código| descrição
 | - | -
-|206 | dados retornados com sucesso
-|406 | não existe usuário com o id informado
+|202 | dados retornados com sucesso
+|402 | não existe dado com o id informado
 
+---------------------------------------------------------------------
 
+### Apagar usuario
+`DELETE`/api/usuario/{id}
+
+|código| descrição
+| - | -
+|203 | dado apagado com sucesso
+|401 | não existe dado com o id informado
 
 
 
